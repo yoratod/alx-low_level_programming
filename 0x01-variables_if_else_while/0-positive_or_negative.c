@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <stdiolib.h>
 /*
  * main - prints a random number and states whether
  * it is positive,negative,or zero.

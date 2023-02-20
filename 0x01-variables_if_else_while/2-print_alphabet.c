@@ -7,6 +7,11 @@
  */
 int main(void)
 {
+	int i;
 
+	for (i = 'a' ; i < 'z' ; i++)
+	{
+		putchar("%c lowercase alphabet\n", i);
+	}
 	return (0);
 }

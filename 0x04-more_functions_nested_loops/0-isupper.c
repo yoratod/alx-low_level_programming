@@ -3,7 +3,7 @@
 /**
  * _isupper - check the code.
  *
- * Return: Always 0.
+ * Return: Always c.
  */
 #include <stdio.h>
 int _isupper(int c)

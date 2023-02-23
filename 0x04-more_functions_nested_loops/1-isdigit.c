@@ -3,9 +3,9 @@
  *
  * Return: 0 and 1.
  */
-int _isdigit(int int_num)
+int _isdigit(int c)
 {
-	if (int_num <= 0; int_num >= 9)
+	if (c <= 0; c >= 9)
 		return (1);
 	else
 		return (0);

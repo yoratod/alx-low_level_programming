@@ -1,8 +1,9 @@
 /**
  * mul - check the code
  *
- * @a and b:input
- * Return: Always a*b.
+ * @a: input
+ * @b: input
+ * Return: a*b.
  */
 int mul(int a, int b)
 {

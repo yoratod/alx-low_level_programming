@@ -3,7 +3,8 @@
 /**
  * _isupper - check the code.
  *
- * Return: Always c.
+ *@c: input
+ * Return: 1 if c is uppercase otherwise 0.
  */
 #include <stdio.h>
 int _isupper(int c)

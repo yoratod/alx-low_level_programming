@@ -2,7 +2,7 @@
  * _isdigit - check the code
  *
  * @c: input
- * Return: 0 and 1.
+ * Return: 1 if c is uppercase otherwise 0..
  */
 int _isdigit(int c)
 {

@@ -1,4 +1,12 @@
-int _isdigit(int c)
+/**
+ * _isdigit - check the code
+ *
+ * Return: 0 and 1.
+ */
+int _isdigit(int int_num)
 {
-	return (c <= 0; c >= 9; c++);
+	if (int_num <= 0; int_num >= 9)
+		return (1);
+	else
+		return (0);
 }

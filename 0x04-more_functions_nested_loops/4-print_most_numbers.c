@@ -1,12 +1,17 @@
-void print_most_numbers(void)
-{
-	int n;
+#include "main"
 
-	for (n = 0; n <= 9 ; n++)
-		if (n != 2 && n != 4)
-		{
-			_putchar(n);
-		}
-	_putchar('\n');
+/**
+  * _isalpha - Checks for alphabetic character
+  * @c: The character to be checked
+  *
+  * Return: 1 for alphabetic character or 0 for anything else
+  */
+int _isalpha(int c)
+{
+	if ((c >= 65 && c <= 90) || (c >= 97 && c <= 122))
+	{
+		return (1);
+	}
+
 	return (0);
 }

@@ -1,15 +1,19 @@
-/**
-  * _islower - Checks for lowercase character
-  * @c: The character to be checked
-  *
-  * Return: 1 for lowercase character or 0 for anything else
-  */
-int _islower(int c)
-{
-	if (c >= 97 && c <= 122)
-	{
-		return (1);
-	}
+#include "main.h"
 
-	return (0);
+/**
+ * print_numbers - print  0 - 9
+ *
+ * Return: void
+ */
+
+void print_numbers(void)
+{
+	char a = 0;
+
+	while (a <= 9)
+	{
+		_putchar(a + '0');
+		a++;
+	}
+	_putchar('\n');
 }

@@ -1,17 +1,12 @@
 #include "main.h"
 #include <stdio.h>
-
 /**
- * reset_to_98- check the code
- *
- * @n:input
- * Return: Always 0.
- */
+  * reset_to_98 - Updates the value it points to 98
+  * @n: pointer to n
+  *
+  * Return: void
+  */
 void reset_to_98(int *n)
 {
-int n;
-
-n = 98;
-printf("value of 'n': %d\n" , n);
-return (0);
+	*n = 98;
 }

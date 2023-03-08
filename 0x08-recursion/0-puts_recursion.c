@@ -1,14 +1,14 @@
 #include "main.h"
 
 /**
- * main - check the code
+ * _puts_recursion - write a number
  *
  * Return: Always 0.
  */
 void _puts_recursion(char *s)
 {
 s = "Puts with recursion";
-_puts_recursion("%char",s);
+_puts_recursion("%char", s);
 _puts('\n');
-    return (0);
+return (0);
 }

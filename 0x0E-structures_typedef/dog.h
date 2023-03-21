@@ -1,20 +1,21 @@
-#ifdef _HEADER_
 #include <stdio.h>
 #include "dog.h"
 /**
- * main - check the code by defining new struct
+ * main - dog structure.
  *
- * @dog :return d;
- * @name : include *name
- * Return: Always 0.
- */
-int main(struct dog *d,char  *name,float age, char *owner)
+ * @d: dog structure.
+ * @name: the name of the name.
+ * @age: the name of the age.
+ * @owner: the name of the owner.
+ * Return: Nothing.
+ *
+ **/
+int main(struct dog *d, char *name, float age, char *owner)
 {
-	if(d != null)
+	if (d != null)
 	{
-        d-> *name;
-        d->  age;
-        d->  *owner;
+		d->name = name;
+		d->age = age;
+		d->owner = owner;
 	}
 };
-#endif

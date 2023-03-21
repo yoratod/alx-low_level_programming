@@ -1,16 +1,13 @@
-#ifndef _HEADER_
-#define _HEADER_
 #include <stdio.h>
 #include "dog.h"
 /**
- * dog - check the code by defining new struct
+ * main - check the code by defining new struct
  *
  * Return: Always 0.
  */
-struct dog
+int main(struct dog->d,char  *name,float age, char *owner)
 {
-        char  *name;
-        float age;
-        char *owner;
+        d -> *name;
+        d ->  age;
+        d ->  *owner;
 };
-#endif

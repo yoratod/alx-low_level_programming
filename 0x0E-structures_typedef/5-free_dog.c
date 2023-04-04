@@ -1,18 +1,19 @@
-#include <stdlib.h>
 #include "dog.h"
-
+#include <stdlib.h>
 /**
-  * free_dog - ...
-  * @d: ...
-  *
-  * Return: ...
-  */
+ * free_dog - frees a dog structure
+ *
+ * @d: pointer to struct to free
+ *
+ * Return: always void
+ */
 void free_dog(dog_t *d)
 {
-	if (d != NULL)
-	{
-		free(d->owner);
+	if (d == NULL)
+		return;
+	if (d->name != NULL)
 		free(d->name);
-		free(d);
-	}
+	if (d->owner != NULL)
+		free(d->owner);
+	free(d);
 }

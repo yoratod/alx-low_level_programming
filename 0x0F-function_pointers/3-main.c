@@ -1,41 +1,43 @@
-#include <stdio.h>
-#include <stdlib.h>
 #include "3-calc.h"
+#include <stdlib.h>
+#include <stdio.h>
+
 /**
- * main - entry point for function
- * @argc: arg counter, number of args
- * @argv: array of pointers to args
+ * main - Prints the result of simple operations.
+ * @argc: The number of arguments supplied to the program.
+ * @argv: An array of pointers to the arguments.
  *
- * Description: calculates basic arithmetic
- *
- * Return: 0 on success, 98 on failure
+ * Return: Always 0.
  */
-int main(int argc, char *argv[])
+int main(int __attribute__((__unused__)) argc, char *argv[])
 {
-	char op;
-	int (*op_func)(int, int);
-	int result;
+	int num1, num2;
+	char *op;
 
 	if (argc != 4)
 	{
 		printf("Error\n");
-		return (98);
-	}
-	op = *(argv[2]);
-	if ((op == '/' || op == '%') && !atoi(argv[3]))
-	{ /* divide by zero exception */
-		printf("Error\n");
-		return (100);
+		exit(98);
 	}
 
-	/* actually do the operation now that we've error chcked */
-	op_func = get_op_func(&op);
-	if (op_func == NULL || argv[2][1] != '\0')
-	{ /* didn't find operator, or operator longer than 1 byte */
+	num1 = atoi(argv[1]);
+	op = argv[2];
+	num2 = atoi(argv[3]);
+
+	if (get_op_func(op) == NULL || op[1] != '\0')
+	{
 		printf("Error\n");
-		return (99);
+		exit(99);
 	}
-	result = op_func(atoi(argv[1]), atoi(argv[3]));
-	printf("%d\n", result);
+
+	if ((*op == '/' && num2 == 0) ||
+	    (*op == '%' && num2 == 0))
+	{
+		printf("Error\n");
+		exit(100);
+	}
+
+	printf("%d\n", get_op_func(op)(num1, num2));
+
 	return (0);
 }

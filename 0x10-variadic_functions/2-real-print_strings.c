@@ -1,6 +1,6 @@
-#include <stdio.h>
 #include <stdarg.h>
 #include <unistd.h>
+int _putchar(char c);
 /**
  * print_strings - prints all strings given, variadic
  * @seperator: seperator to print between strings
@@ -27,21 +27,33 @@ void print_strings(const char *seperator, const unsigned int n, ...)
 		{
 			nil_cp = nil;
 			while (*nil_cp)
-				putchar(*nil_cp++);
+				_putchar(*nil_cp++);
 		}
 		else
 		{
 			while (*cur_str)
 			{
-				putchar(*cur_str++);
+				_putchar(*cur_str++);
 			}
 		}
 		/* seperate strings */
 		if (seperator == NULL || *seperator == '\0')
-			continue;
+			continue;	
 		sep_cp = seperator;
 		while ((*sep_cp) && (i < (n - 1)))
-			putchar(*sep_cp++);
+			_putchar(*sep_cp++);
 	}
-	putchar('\n');
+	_putchar('\n');
 }
+/**
+ * _putchar - writes the character c to stdout
+ * @c: The character to print
+ *
+ * Return: On success 1.
+ * On error, -1 is returned, and errno is set appropriately.
+ */
+int _putchar(char c)
+{
+	return (write(1, &c, 1));
+}
+
